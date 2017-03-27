@@ -38,9 +38,9 @@ var aqiData = [
 	   if (aqiData[i][1]>60)
 	       pullutedCitylist.push(aqiData[i]);//2.将空气质量指数大于60的城市存放到pullutedCitylist列表中
 	 }
-  pullutedCitylist.sort(descend);//3.对pullutedCitylist列表中城市的空气指数，按将序排序，将序函数是自定义的
+  pullutedCitylist.sort(descend);//3.对pullutedCitylist列表中城市的空气指数，按降序排序，降序函数是自定义的
   var list="";
-  for (var i=0;i<pullutedCitylist.length;i++)  //4.降排好序的列表显示到ul中
+  for (var i=0;i<pullutedCitylist.length;i++)  //4.将排好序的列表显示到ul中
   {
     list +="<li>"+"第"+(i+1)+"名："+pullutedCitylist[i]+"</li>";
   }
@@ -49,7 +49,7 @@ var aqiData = [
 })();
 
 	function descend(x,y){
-    return y[1] - x[1];  //按照数组的第2个值升序排列
+    return y[1] - x[1];  //按照数组的第2个值降序排列
 }
 </script>
 </script>
